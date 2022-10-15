@@ -5,7 +5,7 @@ const Header = (): ReactElement => {
   const { dispatch } = useAppContext();
   const onKeyDown = (event: any): void => {
     const value = event.target.value;
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && value !== '') {
       dispatch?.({ type: 'ADD', todoTask: value });
       event.target.value = '';
     }
