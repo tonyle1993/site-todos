@@ -21,7 +21,7 @@ const TodoItem = ({ value }: TodoItemProps) => {
 
   const onEditValueChange = (event: any) => {
     const newValue = event.target.value;
-    if (event.keyCode === 13 && newValue !== '') {
+    if (event.key === 'Enter' && newValue !== '') {
       dispatch?.({ type: 'EDITED', id, newValue });
     }
   };
